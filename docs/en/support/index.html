@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Support — PDF Pin</title>
+<meta name="description" content="Contact, bug reports and answers to the most common questions about PDF Pin.">
+<meta name="color-scheme" content="light dark">
+<meta name="theme-color" content="#FBF9F4" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#0D0F11" media="(prefers-color-scheme: dark)">
+<meta name="referrer" content="no-referrer">
+<link rel="alternate" hreflang="pl" href="https://krystiankjjk.github.io/PDF-Pin/pl/support/">
+<link rel="alternate" hreflang="en" href="https://krystiankjjk.github.io/PDF-Pin/en/support/">
+<link rel="alternate" hreflang="x-default" href="https://krystiankjjk.github.io/PDF-Pin/">
+<link rel="canonical" href="https://krystiankjjk.github.io/PDF-Pin/en/support/">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="PDF Pin">
+<meta property="og:title" content="Support — PDF Pin">
+<meta property="og:description" content="Contact, bug reports and answers to the most common questions about PDF Pin.">
+<meta property="og:url" content="https://krystiankjjk.github.io/PDF-Pin/en/support/">
+<meta property="og:image" content="https://krystiankjjk.github.io/PDF-Pin/assets/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:locale" content="en_US">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" type="image/png" sizes="64x64" href="../../assets/icon-64.png">
+<link rel="apple-touch-icon" href="../../assets/apple-touch-icon.png">
+<link rel="stylesheet" href="../../assets/site.css">
+<!-- GENEROWANE przez Scripts/website/build.py z site_content.py i Scripts/privacy_policy/content.py. NIE EDYTUJ RĘCZNIE. -->
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="site">
+<div class="wrap bar">
+<a class="brand" href="../../en/"><img src="../../assets/icon-64.png" width="32" height="32" alt=""><span>PDF Pin</span></a>
+<nav class="main" aria-label="PDF Pin"><a href="../../en/">Home</a><a href="../../en/support/" aria-current="page">Support</a><a href="../../en/privacy/">Privacy</a></nav>
+<nav class="langs" aria-label="Language"><a href="../../pl/support/" hreflang="pl" lang="pl" aria-label="Polski" title="Polski">PL</a></nav>
+</div>
+</header>
+<main id="main">
+<div class="wrap narrow">
+<div class="page-head reveal">
+<span class="eyebrow">PDF Pin · Support</span>
+<h1>Support</h1>
+<p class="lead">Something not working, or a question? Write — you’ll get an answer from the person who built the app.</p>
+</div>
+
+<div class="content">
+<section aria-labelledby="contact-h">
+<h2 id="contact-h" class="visually-plain">Contact</h2>
+<div class="contact">
+<form class="mailform" action="mailto:pdfpinapp@icloud.com" method="get">
+<label for="f-subject">Subject</label>
+<input id="f-subject" name="subject" type="text" required maxlength="140" placeholder="E.g. a pin doesn’t open its photo">
+<label for="f-body">Message</label>
+<textarea id="f-body" name="body" rows="6" required placeholder="What happened? The app and iPhone versions help a lot."></textarea>
+<button class="btn" type="submit">Open in your mail app →</button>
+<p class="formnote">The form doesn’t send anything by itself — it opens your mail app with a ready message to pdfpinapp@icloud.com. This site has no server and stores nothing you type.</p>
+</form>
+<dl>
+<div><dt class="label">Email</dt><dd class="email">pdfpinapp@icloud.com</dd></div>
+<div><dt class="label">Response time</dt><dd>within 3 business days</dd></div>
+<div><dt class="label">Languages</dt><dd>English or Polish</dd></div>
+</dl>
+</div>
+<script>
+  // Formularz → mailto:. Bez JS przeglądarka sama składa adres z pól
+  // (spacje jako „+”); ze skryptem kodujemy poprawnie i dodajemy prefiks tematu.
+  // Nic nie opuszcza przeglądarki poza otwarciem aplikacji pocztowej.
+  (function () {
+    var f = document.querySelector(".mailform");
+    f.addEventListener("submit", function (e) {
+      e.preventDefault();
+      var q = "subject=" + encodeURIComponent("PDF Pin: " + f.subject.value)
+            + "&body=" + encodeURIComponent(f.body.value);
+      location.href = "mailto:pdfpinapp@icloud.com?" + q;
+    });
+  })();
+</script>
+</section>
+
+<section aria-labelledby="bug-h">
+<h2 id="bug-h">How to report a bug from the app</h2>
+<ol class="bugsteps"><li><span>Open <b>Settings</b> (the gear on the project list).</span></li><li><span>Under <b>Diagnostics</b>, choose <b>Report a bug</b>.</span></li><li><span>Describe what happened and send — the message opens in your mail app.</span></li></ol>
+<p>The message contains your description, the app version, the iOS version, the Google Drive connection state and the number of projects, documents and pins.</p>
+<p>You can attach a <b>diagnostic log</b>. It contains <b>project and file names</b>, but not their contents: no photos, notes or locations. Before anything is sent you see the whole message and tap “Send” yourself.</p>
+<p>Details: <a href="../../en/privacy/#sec-8">privacy policy, section 8</a>.</p>
+</section>
+
+<section aria-labelledby="faq-h">
+<h2 id="faq-h">FAQ</h2>
+<div class="faq"><article><span class="q">Q01</span><div><h3>Where are my files?</h3><p>In the <b>Files</b> app → <b>On My iPhone</b> → <b>PDF Pin</b>. Every project is a folder: copies of the PDF documents and a <code>photos</code> subfolder with the pictures. The app works on a copy — the file you imported stays exactly as it was.</p></div></article><article><span class="q">Q02</span><div><h3>How do I delete a pin?</h3><p>Touch and hold the pin on the drawing — its details open with a <b>Delete pin</b> button. Once you confirm, the pin, its photo page in the PDF and the photo file are removed. A single tap on a pin still takes you to its photo page.</p></div></article><article><span class="q">Q03</span><div><h3>Why is there no pin number 2?</h3><p>A pin’s number never changes. When you delete a pin, a gap remains (1, 3, 4), because that number is already written into the PDF — on the plan and in the header of the photo page. Renumbering would make the app disagree with a document you may have already sent. A new pin gets the next number after the highest one.</p></div></article><article><span class="q">Q04</span><div><h3>Why does the app use GPS, and what if I say no?</h3><p>Coordinates and an address are stored with the photo so you know where it was taken. The address is looked up by an Apple service. If you decline, pins and photos work as usual — just without a location. Change it in <b>iOS Settings → PDF Pin → Location</b>.</p></div></article><article><span class="q">Q05</span><div><h3>How does Google Drive sync work, and how do I turn it off?</h3><p>It stays off until you sign in to your Google account on the Google Drive bar on the project list. Copies of PDFs and photos then go to <code>PDF Pin/&lt;project name&gt;</code> on your Drive — directly, not through any server of ours. The app sees only the files it created. To disconnect, tap the Google Drive bar → <b>Disconnect</b>. You can also revoke access at <a href="https://myaccount.google.com/permissions">myaccount.google.com/permissions</a>.</p></div></article><article><span class="q">Q06</span><div><h3>How do I export the PDF with the photos?</h3><p>Open the project and tap <b>Share</b> in the header — you get the system sheet with Mail, messengers and “Save to Files”. You export one finished PDF: the plan with pins and the photo pages with links, readable in any PDF reader. The same file is also in the Files app.</p></div></article><article><span class="q">Q07</span><div><h3>Do I need an account?</h3><p>No. PDF Pin has no accounts and no sign-up. A Google account is needed only for the optional Drive sync.</p></div></article></div>
+</section>
+
+<section aria-labelledby="pub-h">
+<h2 id="pub-h">Publisher</h2>
+<dl class="imprint"><dt>Publisher</dt><dd>Krystian Kijak</dd><dt>Address</dt><dd>ul. Bolesława Prusa 83/3d, 50-316 Wrocław</dd><dt>Email</dt><dd><a href="mailto:pdfpinapp@icloud.com">pdfpinapp@icloud.com</a></dd></dl>
+</section>
+</div>
+</div>
+</main>
+<footer class="site">
+<div class="wrap">
+<div class="cols">
+<div>
+<div class="footer-brand"><img src="../../assets/icon-64.png" width="24" height="24" alt="">PDF Pin</div>
+<p style="margin:0">Photos pinned to PDF plans. No accounts, no analytics, no cookies.</p>
+</div>
+<nav aria-label="PDF Pin"><h2>PDF Pin</h2><ul><li><a href="../../en/">Home</a></li><li><a href="../../en/support/">Support</a></li><li><a href="../../en/privacy/">Privacy</a></li></ul></nav>
+<div><h2>Publisher</h2><dl class="imprint"><dt>Publisher</dt><dd>Krystian Kijak</dd><dt>Address</dt><dd>ul. Bolesława Prusa 83/3d, 50-316 Wrocław</dd><dt>Email</dt><dd><a href="mailto:pdfpinapp@icloud.com">pdfpinapp@icloud.com</a></dd></dl></div>
+</div>
+<p class="fine">© 2026 Krystian Kijak · Privacy v1.0</p>
+</div>
+</footer>
+</body>
+</html>
