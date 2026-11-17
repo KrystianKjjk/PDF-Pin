@@ -2,6 +2,7 @@
 <html lang="pl">
 <head>
 <meta charset="utf-8">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self' data:; style-src 'self' 'unsafe-inline'; script-src 'sha256-bc8xZQd6UQuTlcaP759q2WoH0H2UwB1mw9iesKS2+Yc='; connect-src 'none'; object-src 'none'; base-uri 'none'; form-action mailto:">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Wsparcie — PDF Pin</title>
 <meta name="description" content="Kontakt, zgłaszanie błędów i odpowiedzi na najczęstsze pytania o PDF Pin.">
@@ -33,7 +34,7 @@
 <header class="site">
 <div class="wrap bar">
 <a class="brand" href="../../pl/"><img src="../../assets/icon-64.png" width="32" height="32" alt=""><span>PDF Pin</span></a>
-<nav class="main" aria-label="PDF Pin"><a href="../../pl/">Start</a><a href="../../pl/support/" aria-current="page">Wsparcie</a><a href="../../pl/privacy/">Prywatność</a></nav>
+<nav class="main" aria-label="Menu główne"><a href="../../pl/">Start</a><a href="../../pl/support/" aria-current="page">Wsparcie</a><a href="../../pl/privacy/">Prywatność</a></nav>
 <nav class="langs" aria-label="Język"><a href="../../en/support/" hreflang="en" lang="en" aria-label="English" title="English">EN</a></nav>
 </div>
 </header>
@@ -71,8 +72,10 @@
     var f = document.querySelector(".mailform");
     f.addEventListener("submit", function (e) {
       e.preventDefault();
+      // RFC 6068: nowa linia w mailto: to %0D%0A — samo %0A Outlook skleja.
+      var body = f.body.value.replace(/\r?\n/g, "\r\n");
       var q = "subject=" + encodeURIComponent("PDF Pin: " + f.subject.value)
-            + "&body=" + encodeURIComponent(f.body.value);
+            + "&body=" + encodeURIComponent(body);
       location.href = "mailto:pdfpinapp@icloud.com?" + q;
     });
   })();
@@ -106,10 +109,10 @@
 <div class="footer-brand"><img src="../../assets/icon-64.png" width="24" height="24" alt="">PDF Pin</div>
 <p style="margin:0">Zdjęcia przypięte do planu PDF. Bez kont, bez analityki, bez cookies.</p>
 </div>
-<nav aria-label="PDF Pin"><h2>PDF Pin</h2><ul><li><a href="../../pl/">Start</a></li><li><a href="../../pl/support/">Wsparcie</a></li><li><a href="../../pl/privacy/">Prywatność</a></li></ul></nav>
+<nav aria-label="Menu w stopce"><h2>PDF Pin</h2><ul><li><a href="../../pl/">Start</a></li><li><a href="../../pl/support/">Wsparcie</a></li><li><a href="../../pl/privacy/">Prywatność</a></li></ul></nav>
 <div><h2>Wydawca</h2><dl class="imprint"><dt>Wydawca</dt><dd>Krystian Kijak</dd><dt>Adres</dt><dd>ul. Bolesława Prusa 83/3d, 50-316 Wrocław</dd><dt>E-mail</dt><dd><a href="mailto:pdfpinapp@icloud.com">pdfpinapp@icloud.com</a></dd></dl></div>
 </div>
-<p class="fine">© 2026 Krystian Kijak · Prywatność v1.0</p>
+<p class="fine">© 2026 Krystian Kijak · Prywatność v1.1</p>
 </div>
 </footer>
 </body>

@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self' data:; style-src 'self' 'unsafe-inline'; script-src 'sha256-bc8xZQd6UQuTlcaP759q2WoH0H2UwB1mw9iesKS2+Yc='; connect-src 'none'; object-src 'none'; base-uri 'none'; form-action mailto:">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Support — PDF Pin</title>
 <meta name="description" content="Contact, bug reports and answers to the most common questions about PDF Pin.">
@@ -33,7 +34,7 @@
 <header class="site">
 <div class="wrap bar">
 <a class="brand" href="../../en/"><img src="../../assets/icon-64.png" width="32" height="32" alt=""><span>PDF Pin</span></a>
-<nav class="main" aria-label="PDF Pin"><a href="../../en/">Home</a><a href="../../en/support/" aria-current="page">Support</a><a href="../../en/privacy/">Privacy</a></nav>
+<nav class="main" aria-label="Main menu"><a href="../../en/">Home</a><a href="../../en/support/" aria-current="page">Support</a><a href="../../en/privacy/">Privacy</a></nav>
 <nav class="langs" aria-label="Language"><a href="../../pl/support/" hreflang="pl" lang="pl" aria-label="Polski" title="Polski">PL</a></nav>
 </div>
 </header>
@@ -71,8 +72,10 @@
     var f = document.querySelector(".mailform");
     f.addEventListener("submit", function (e) {
       e.preventDefault();
+      // RFC 6068: nowa linia w mailto: to %0D%0A — samo %0A Outlook skleja.
+      var body = f.body.value.replace(/\r?\n/g, "\r\n");
       var q = "subject=" + encodeURIComponent("PDF Pin: " + f.subject.value)
-            + "&body=" + encodeURIComponent(f.body.value);
+            + "&body=" + encodeURIComponent(body);
       location.href = "mailto:pdfpinapp@icloud.com?" + q;
     });
   })();
@@ -106,10 +109,10 @@
 <div class="footer-brand"><img src="../../assets/icon-64.png" width="24" height="24" alt="">PDF Pin</div>
 <p style="margin:0">Photos pinned to PDF plans. No accounts, no analytics, no cookies.</p>
 </div>
-<nav aria-label="PDF Pin"><h2>PDF Pin</h2><ul><li><a href="../../en/">Home</a></li><li><a href="../../en/support/">Support</a></li><li><a href="../../en/privacy/">Privacy</a></li></ul></nav>
+<nav aria-label="Footer menu"><h2>PDF Pin</h2><ul><li><a href="../../en/">Home</a></li><li><a href="../../en/support/">Support</a></li><li><a href="../../en/privacy/">Privacy</a></li></ul></nav>
 <div><h2>Publisher</h2><dl class="imprint"><dt>Publisher</dt><dd>Krystian Kijak</dd><dt>Address</dt><dd>ul. Bolesława Prusa 83/3d, 50-316 Wrocław</dd><dt>Email</dt><dd><a href="mailto:pdfpinapp@icloud.com">pdfpinapp@icloud.com</a></dd></dl></div>
 </div>
-<p class="fine">© 2026 Krystian Kijak · Privacy v1.0</p>
+<p class="fine">© 2026 Krystian Kijak · Privacy v1.1</p>
 </div>
 </footer>
 </body>
