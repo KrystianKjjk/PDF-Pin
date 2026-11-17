@@ -48,46 +48,67 @@
 <div class="cta"><span class="soon">Coming soon to the App Store</span><a class="textlink" href="#how">See how it works</a></div>
 </div>
 <figure class="figure">
-<svg viewBox="0 0 640 500" role="img" aria-label="A floor plan with three pins numbered 1, 3 and 4. A line leads from pin 3 to a photo page showing GPS coordinates, the time and a link back to the plan.">
+<svg class="fig-real" viewBox="0 0 640 500" role="img" aria-label="An apartment floor plan with four pins. A line leads from pin 3, by the bedroom window, to a photo page showing a plaster crack with GPS coordinates and the time.">
 <defs>
-<filter id="sh" x="-20%" y="-20%" width="140%" height="150%"><feDropShadow dx="0" dy="14" stdDeviation="14" flood-color="#000" flood-opacity="0.22"/></filter>
-<pattern id="hatch" width="6" height="6" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><line x1="0" y1="0" x2="0" y2="6" stroke="#D8D2C5" stroke-width="2"/></pattern>
+ <pattern id="pp-masonry" width="4" height="4" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><rect width="4" height="4" fill="#e2ddd2"/><path d="M0 0V4" stroke="#aaa394" stroke-width="1"/></pattern>
+ <pattern id="pp-tiles" width="16" height="16" patternUnits="userSpaceOnUse"><path d="M16 0H0V16" fill="none" stroke="#dfdbd2" stroke-width=".7"/></pattern>
+ <filter id="pp-shadow" x="-20%" y="-15%" width="150%" height="150%"><feDropShadow dx="0" dy="9" stdDeviation="8" flood-opacity=".22"/></filter>
+ <clipPath id="pp-photo-clip"><rect x="16" y="42" width="230" height="146" rx="2"/></clipPath>
 </defs>
-<g filter="url(#sh)">
-<path class="fig-sheet" d="M10 30 H380 L420 70 V480 H10 Z"/>
-</g>
-<path class="fig-fold" d="M380 30 V70 H420 Z"/>
-<rect class="fig-hatch" x="50" y="90" width="60" height="50"/>
-<rect class="fig-wall" x="50" y="90" width="330" height="330"/>
-<path class="fig-wall-in" d="M220 90 V200 M220 245 V300 H300 M340 300 H380 M50 260 H120 M165 260 H220"/>
-<path class="fig-thin" d="M120 260 V215 A45 45 0 0 1 165 260 M220 200 H265 A45 45 0 0 1 220 245"/>
-<line class="fig-window" x1="110" y1="90" x2="170" y2="90"/><line class="fig-thin" x1="110" y1="90" x2="170" y2="90"/>
-<line class="fig-window" x1="270" y1="90" x2="340" y2="90"/><line class="fig-thin" x1="270" y1="90" x2="340" y2="90"/>
-<line class="fig-window" x1="50" y1="320" x2="50" y2="385"/><line class="fig-thin" x1="50" y1="320" x2="50" y2="385"/>
-<line class="fig-thin" x1="240" y1="330" x2="240" y2="400"/><line class="fig-thin" x1="252" y1="330" x2="252" y2="400"/><line class="fig-thin" x1="264" y1="330" x2="264" y2="400"/><line class="fig-thin" x1="276" y1="330" x2="276" y2="400"/><line class="fig-thin" x1="288" y1="330" x2="288" y2="400"/><line class="fig-thin" x1="300" y1="330" x2="300" y2="400"/><line class="fig-thin" x1="312" y1="330" x2="312" y2="400"/><line class="fig-thin" x1="324" y1="330" x2="324" y2="400"/><line class="fig-thin" x1="336" y1="330" x2="336" y2="400"/><line class="fig-thin" x1="348" y1="330" x2="348" y2="400"/><line class="fig-thin" x1="360" y1="330" x2="360" y2="400"/>
-<text class="fig-label" x="128" y="238">1.01</text>
-<text class="fig-label" x="290" y="140">1.02</text>
-<text class="fig-label" x="118" y="410">1.03</text>
-<line class="fig-dim" x1="50" y1="450" x2="380" y2="450"/><line class="fig-dim" x1="50" y1="444" x2="50" y2="456"/><line class="fig-dim" x1="220" y1="444" x2="220" y2="456"/><line class="fig-dim" x1="380" y1="444" x2="380" y2="456"/>
-<text class="fig-label" x="118" y="468">5 100</text><text class="fig-label" x="282" y="468">4 800</text>
-<path class="fig-leader" d="M313 190 C 340 190 340 150 366 150"/>
-<g class="fig-pin" transform="translate(112 160)"><g class="drop" style="--d:0.25s"><circle r="13"/><text>1</text></g></g>
-<g class="fig-pin" transform="translate(150 340)"><g class="drop" style="--d:0.45s"><circle r="13"/><text>4</text></g></g>
-<g class="fig-pin" transform="translate(300 190)"><circle class="halo" r="13"/><g class="drop" style="--d:0.65s"><circle r="13"/><text>3</text></g></g>
-<g transform="translate(362 96) rotate(-2.5)"><g class="slide">
-<g filter="url(#sh)"><rect class="fig-card" width="262" height="304" rx="4"/></g>
+<path class="fig-sheet" fill="#fbf9f4" stroke="#d8d2c5" filter="url(#pp-shadow)" d="M12 24H386L418 56V478H12Z"/>
+<path class="fig-fold" fill="#efebe2" stroke="#d8d2c5" d="M386 24V56H418Z"/>
+<text class="fig-caption" x="36" y="48">PDF PIN / SITE INSPECTION</text>
+<text class="fig-title" x="36" y="66">Apartment · floor plan</text>
+<!-- Exterior wall poché, with genuine openings for windows and entry. -->
+<path class="fig-masonry" d="M58 94H91V104H68V145H58Z M155 94H246V104H155Z M310 94H350V205H340V104H310Z M350 254V382H236V372H340V254Z M200 382H58V311H68V372H276Z M58 247V198H68V247Z"/>
+<!-- Window frames, glazing and jambs. -->
+<g class="fig-glass"><path d="M91 96H155V102H91Z M246 96H310V102H246Z M60 145H66V198H60Z M60 247H66V311H60Z M342 205H348V254H342Z"/></g>
+<g class="fig-detail"><path d="M91 99H155 M123 96V102 M246 99H310 M278 96V102 M63 145V198 M60 172H66 M63 247V311 M60 279H66 M345 205V254 M342 230H348"/></g>
+<!-- Partitions: living room, bedroom, hall, kitchen and bathroom. -->
+<path class="fig-partition" d="M221 104H227V185H221Z M221 221H227V260H221Z M68 254H153V260H68Z M189 254H221V260H189Z M227 236H250V242H227Z M284 236H340V242H284Z M251 242H257V283H251Z M251 319H257V372H251Z"/>
+<!-- Hinged leaves and quarter-circle swings (clear openings). -->
+<g class="fig-detail"><path d="M221 185H185A36 36 0 0 0 221 221 M153 254V218A36 36 0 0 1 189 254 M250 236V202A34 34 0 0 1 284 236 M251 319H215A36 36 0 0 1 251 283 M200 372V336A36 36 0 0 1 236 372"/></g>
+<!-- Bathroom tile grid and sanitary fixtures. -->
+<path d="M257 242H340V372H257Z" fill="url(#pp-tiles)"/>
+<g class="fig-fixture"><rect x="295" y="248" width="39" height="47" rx="2"/><path d="M298 251H331V291H298Z"/><rect x="263" y="332" width="22" height="10" rx="2"/><path d="M265 342H283V351C283 368 265 368 265 351Z"/><rect x="306" y="338" width="28" height="25" rx="3"/><ellipse cx="320" cy="350" rx="9" ry="7"/></g>
+<g class="fig-detail"><path d="M300 253L329 290 M329 253L300 290 M320 337V344"/><circle cx="315" cy="273" r="2"/></g>
+<!-- Kitchen worktop, sink, hob and tall refrigerator. -->
+<g class="fig-fixture"><path d="M74 302H96V346H182V366H74Z"/><rect x="76" y="273" width="20" height="28"/><rect x="78" y="308" width="14" height="24" rx="2"/><rect x="79" y="310" width="12" height="14" rx="2"/><rect x="135" y="348" width="24" height="16" rx="1"/></g>
+<g class="fig-detail"><path d="M85 305V314 M113 346V366 M163 346V366 M77 276L93 297 M93 276L77 297"/><circle cx="141" cy="352" r="2.7"/><circle cx="153" cy="352" r="2.7"/><circle cx="141" cy="360" r="2.7"/><circle cx="153" cy="360" r="2.7"/></g>
+<!-- Light furniture outlines establish scale without obscuring the plan. -->
+<g class="fig-detail" opacity=".6"><rect x="79" y="116" width="28" height="89" rx="3"/><path d="M85 118V203 M86 145H105 M86 175H105"/><rect x="125" y="139" width="37" height="48" rx="6"/><rect x="275" y="116" width="53" height="67" rx="2"/><path d="M276 137H327 M279 120H299V133H279Z M304 120H324V133H304Z"/><rect x="231" y="109" width="17" height="60"/><path d="M232 139H247"/></g>
+<!-- Radiators beneath windows. -->
+<g class="fig-detail"><path d="M108 108H148V113H108Z M253 108H291V113H253Z M112 108V113 M118 108V113 M124 108V113 M130 108V113 M136 108V113 M142 108V113 M258 108V113 M264 108V113 M270 108V113 M276 108V113 M282 108V113 M288 108V113"/></g>
+
+<text class="fig-room" x="146" y="218">1.01 Living</text><text class="fig-area" x="146" y="231">23.2 m²</text>
+<text class="fig-room" x="285" y="199">1.02 Bedroom</text><text class="fig-area" x="285" y="212">12.4 m²</text>
+<text class="fig-room" x="150" y="293">1.03 Kitchen</text><text class="fig-area" x="150" y="306">12.8 m²</text>
+<text class="fig-room" x="299" y="312">1.05 Bath</text><text class="fig-area" x="299" y="325">7.1 m²</text>
+<text class="fig-room" x="210" y="337">1.04 Hall</text><text class="fig-area" x="210" y="350">5.7 m²</text>
+<g class="fig-measure"><path d="M58 390V423 M224 390V408 M350 390V423 M58 402H350 M58 419H350 M51 94H30 M51 257H30 M51 382H30 M36 94V382"/>
+<path d="M55 405l6 -6"/>
+<path d="M221 405l6 -6"/>
+<path d="M347 405l6 -6"/>
+<path d="M55 422l6 -6"/>
+<path d="M347 422l6 -6"/>
+<path d="M33 97l6 -6"/>
+<path d="M33 260l6 -6"/>
+<path d="M33 385l6 -6"/>
+</g><g class="fig-dimension"><text x="141" y="398">4 600</text><text x="287" y="398">3 500</text><text x="204" y="415">8 100</text><text transform="translate(31 176) rotate(-90)">4 500</text><text transform="translate(31 320) rotate(-90)">3 500</text></g>
+<path class="fig-measure" d="M36 435H394V465H36Z M281 435V465"/><text class="fig-title" x="45" y="449">Ground floor plan · 1:50</text><text class="fig-caption" x="45" y="460">USABLE AREA 61.2 m² · DIAGRAM</text><text class="fig-caption" x="291" y="448">SHEET A.01</text><text class="fig-caption" x="291" y="460">DIMENSIONS: mm</text>
+<path class="fig-leader" d="M318 120C353 120 345 191 382 191"/>
+
+<g class="fig-pin" transform="translate(78 188)"><g class="drop" style="--d:0.25s"><circle r="12"/><text>1</text></g></g>
+<g class="fig-pin" transform="translate(286 287)"><g class="drop" style="--d:0.4s"><circle r="12"/><text>2</text></g></g>
+<g class="fig-pin" transform="translate(202 265)"><g class="drop" style="--d:0.55s"><circle r="12"/><text>4</text></g></g>
+<g class="fig-pin" transform="translate(305 120)"><circle class="halo" r="12"/><g class="drop" style="--d:0.7s"><circle r="12"/><text>3</text></g></g>
+<g transform="translate(372 163) rotate(-2.5)"><g class="slide">
+<rect class="fig-card" width="262" height="272" rx="4" filter="url(#pp-shadow)"/>
 <text class="fig-head" x="16" y="28">PIN 3</text>
-<rect class="fig-photo" x="16" y="42" width="230" height="146" rx="2"/>
-<path d="M16 160 H246" stroke="#3A414B" stroke-width="2"/>
-<rect x="132" y="62" width="82" height="80" fill="#3E5670" stroke="#AEB4BC" stroke-width="3"/>
-<path d="M173 62 V142 M132 102 H214" stroke="#AEB4BC" stroke-width="2"/>
-<path d="M126 58 L112 80 L119 92 L102 118 L108 130 L92 160" stroke="#FFB23E" stroke-width="2.2" fill="none" stroke-linejoin="round"/>
-<circle cx="112" cy="104" r="26" fill="none" stroke="#E8961F" stroke-width="1.6" stroke-dasharray="3 3"/>
+<image href="../assets/hero-photo.jpg" x="16" y="42" width="230" height="146" preserveAspectRatio="xMidYMid slice" clip-path="url(#pp-photo-clip)"/>
 <text class="fig-note" x="16" y="214">Plaster crack by the window</text>
 <text class="fig-meta" x="16" y="238">52.40638° N  16.92517° E</text>
 <text class="fig-meta" x="16" y="256">2026-09-14 · 10:42</text>
-<line x1="16" y1="270" x2="246" y2="270" stroke="#D8D2C5"/>
-<text class="fig-back" x="16" y="290">← Back to plan</text>
 </g></g>
 </svg>
 </figure>

@@ -198,6 +198,23 @@ nav.main a[aria-current="page"] { color: var(--ink); box-shadow: inset 0 -2px 0 
 .fig-pin circle { fill: #E8961F; stroke: #FFB23E; stroke-width: 1.7; }
 .fig-pin text { font: 800 12px var(--display); fill: #1A1206; text-anchor: middle; dominant-baseline: central; }
 .fig-pin .halo { fill: rgba(232, 150, 31, 0.22); stroke: none; }
+/* Ilustracja hero: rzut mieszkania (hero_figure.svg) — klasy w obrębie .fig-real. */
+.fig-real .fig-masonry { fill: url(#pp-masonry); stroke: #49463f; stroke-width: 1; }
+.fig-real .fig-partition { fill: #d6d1c6; stroke: #49463f; stroke-width: .85; }
+.fig-real .fig-detail { fill: none; stroke: #77746b; stroke-width: .85; }
+.fig-real .fig-fixture { fill: #fdfcf8; stroke: #88847a; stroke-width: .8; }
+.fig-real .fig-glass { fill: #e9eeeb; stroke: #666e69; stroke-width: .75; }
+.fig-real .fig-room { font: 600 9px var(--sans, sans-serif); fill: #49463f; text-anchor: middle; }
+.fig-real .fig-area { font: 400 8.5px var(--mono, monospace); fill: #777168; text-anchor: middle; }
+.fig-real .fig-measure { fill: none; stroke: #999185; stroke-width: .65; }
+.fig-real .fig-dimension { font: 400 8px var(--mono, monospace); fill: #756f64; text-anchor: middle; }
+.fig-real .fig-caption { font: 500 8px var(--mono, monospace); fill: #777168; letter-spacing: .5px; }
+.fig-real .fig-title { font: 600 11px var(--sans, sans-serif); fill: #49463f; }
+.fig-real .fig-pin circle { stroke-width: 1.5; }
+.fig-real .fig-pin text { font-size: 12px; }
+@media (prefers-reduced-motion: reduce) {
+ .fig-real .drop, .fig-real .halo, .fig-real .slide, .fig-real .fig-leader { animation: none; }
+}
 
 @media (prefers-reduced-motion: no-preference) {
   .drop { animation: drop 0.7s cubic-bezier(0.2, 0.9, 0.3, 1.35) both; animation-delay: var(--d, 0s);
